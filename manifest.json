@@ -1,7 +1,7 @@
 {
-    "name": "distorsi",
-    "short_name": "distorsi",
-    "description": "Distorsi media monitoring",
+    "name": "MediaWisataMonitoring",
+    "short_name": "MWM",
+    "description": "Media Wisata Monitoring",
     "dir": "auto",
     "lang": "en-US",
     "display": "standalone",
