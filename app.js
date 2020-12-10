@@ -549,7 +549,7 @@ if (!('serviceWorker' in navigator)) {
 
 
 function registerServiceWorker() {
-    return navigator.serviceWorker.register('./service-worker.js')
+    return navigator.serviceWorker.register('./service-worker.js', {scope: '/{repository}/'})
         .then(function (registration) {
             console.log('Registrasi service worker berhasil.');
             return registration;
