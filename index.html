@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Wisata Monitoring</title>
+    <link rel="icon" href="./assets/favicon.ico" />
+    <link rel="manifest" href="./manifest.json">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="./thirdparty/materialize.min.css">
+    <script src="./thirdparty/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="./thirdparty/materialize.min.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="dicoding:email" content="ri.tarecha@gmail.com">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper  indigo darken-4 ">
+                <a href="#" class="brand-logo center orange-text text-lighten-4">
+                    MWM
+                </a>
+
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger orange-text text-lighten-4"><i class="material-icons">menu</i></a>
+                <ul class="topnav right hide-on-med-and-down">
+                    <li><a href="#dashboard" class="menu orange-text text-lighten-4">Dashboard</a></li>
+                    <li><a href="#bagikan" class="menu orange-text text-lighten-4">Bagikan berita dan dapatkan poin</a></li>
+                    <li><a href="#poin" class="menu orange-text text-lighten-4">Tukarkan poin</a></li>
+                </ul>
+            </div>
+
+        </nav>
+
+
+        <aside>
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="#dashboard" class="menu sidenav-close">Dashboard</a></li>
+                <li><a href="#bagikan" class="menu sidenav-close">Bagikan berita dan dapatkan poin</a></li>
+                <li><a href="#poin" class="menu sidenav-close">Tukarkan poin</a></li>
+            </ul>
+        </aside>
+    </header>
+    <div class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    <main>
+        <div id="dashboard">
+
+            <div class="carousel center">
+
+            </div>
+
+            <div class="blue lighten-5">
+                <!-- Page Content goes here -->
+                <h1 class="center">Media Wisata Monitoring</h1>
+                <p class="center">Simak topik pemberitaan wisata di media mainstream baru-baru ini</p>
+
+                <div class="container">
+                    <div id="piechart" style="width:100%; min-height:500px;" class="center">
+                    </div>
+                </div>
+                <p class="center" id="narasipiechart"></p>
+            </div>
+
+            <!-- Page Content goes here -->
+            <h3 class="center">Fokus Pemberitaan Wisata</h3>
+            <p class="center">Beragam media fokus pada topik wisata yang berbeda, lihat fokus media</p>
+
+            <div class="container">
+                <div id="barchart" style="width:100%; min-height:500px;" class="center">
+                </div>
+                <p class="center" id="narasibarchart"></p>
+            </div>
+
+            <div class="blue lighten-5">
+                <!-- Page Content goes here -->
+                <h3 class="center">Analisa Sentimen Pemberitaan</h3>
+                <p class="center">Simak sentimen pemberitaan terhadap 10 topik utama</p>
+
+                <div class="container">
+                    <div class="input-field col s12">
+                        <select id="selectTopik">
+
+                        </select>
+                        <label>Pilih topik berita</label>
+                    </div>
+                    <div id="sentimenchart" style="width:100%; min-height:500px;" class="center">
+                    </div>
+                    <p class="center" id="narasisentimenchart"></p>
+                </div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div id="bagikan">
+            <div class="container">
+                <div id="sentimen" class="center">
+                    <a class="waves-effect waves-light btn blue " value="positif">Positif</a>
+                    <a class="waves-effect waves-light btn grey " value="netral">Netral</a>
+                    <a class="waves-effect waves-light btn red " value="negatif">Negatif</a>
+                </div>
+
+                <div class="row">
+                    <article>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+
+        <br />
+
+        <div id="poin">
+            <div class="container">
+                <div class="row">
+
+                    <div class="center"><a class="btn-floating pulse center blue">
+                            <span id="jumlahpoin"></span>
+
+                        </a>
+                        <p>Kumpulkan terus poin anda dengan membagikan berita, tukarkan dengan berbagai voucher wisata menarik</p>
+                    </div>
+
+                    <div class="col s12 m8 offset-m2 l6 offset-l3">
+                        <div class="card-panel grey lighten-5 z-depth-1">
+                            <div class="row valign-wrapper">
+
+                                <div class="col s12">
+                                    <h3>Pesan Tiket Pesawat, Kereta, dan Hotel Bisa Gratis Rapid Test</h3>
+                                    <span class="black-text">
+                                        <ul>
+                                            <li>Promo berlaku 28 November 2020 - 12 Januari 2021</li>
+                                            <li>Minimal pembayaran Rp. 500.00,-</li>
+                                            <li>Transaksi pada tokopedia</li>
+                                            <a id="gratisrapid" class="waves-effect waves-light btn blue">Redeem Promo Code (5 Poin)</a><br />
+                                            <span id="vouchercode"></span>
+                                        </ul>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+    <footer>
+    </footer>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
